@@ -1,0 +1,78 @@
+\documentclass[fonzsize=13pt,oneside,listof=totoc,paper=a4,headings=small]{scrbook}
+% Nützliche Packages für die Gestaltung und allgemeine Konfiguration des Dokuments
+\setlength\parindent{0pt}
+% -----------------------------------
+
+% Allgemeine Formatierungen
+%\usepackage{ngerman}				% neue deutsche Rechtschreibung
+\usepackage[utf8]{inputenc} 		% Umlaute im Text
+\usepackage[T1]{fontenc}
+\usepackage{xspace}                 % Vermeidung von "ineinanderfallenden f's", wie z.B. bei Schifffahrt
+\usepackage{url}		            % korrekte Anzeige/Umbruch von URLs
+\usepackage{listings}               % z.B. nützlich zum Einbinden von Quellcode
+\usepackage{hyperref} 				% für Hyperlinks in PDF-Dokumenten 
+\usepackage{lmodern}
+\usepackage{enumerate}
+\usepackage[onehalfspacing]{setspace}
+
+% Kopfzeile
+\usepackage[headsepline,manualmark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\pagemark}
+\ihead{\headmark}
+\automark{chapter}
+\pagestyle{scrheadings}
+
+% Seitenspiegel
+\usepackage[left=25mm,right=20mm,top=25mm,bottom=25mm]{geometry}
+
+% Literatur
+%\usepackage[square,sort,comma,numbers]{natbib}         % Deutsches Literaturpackage
+\usepackage{cite, float}
+\usepackage{hyperref}
+
+%\usepackage{float}
+% Grafiken
+\usepackage{graphicx} 				% Grafiken einfügen (pdf,png - aber jpg vermeiden)
+\graphicspath{{./Bilder/}}          % Pfad zu den Bildern
+
+% Tabellen
+\usepackage{booktabs} 				% bessere Gestaltung von Tabellen
+\usepackage{longtable} 				% für bessere Tabellen über mehrere Seiten
+
+% Koma-Script Kompatibilität
+\usepackage{scrhack}
+
+% Das Dokument selbst mit seinen Bestandteilen
+% --------------------------------------------
+\begin{document}
+\frontmatter 
+% ----------------------------------------------
+    \include{./Bestandteile/titel} 				    % Titelblatt
+    \include{./Bestandteile/kurzzusammenfassung}  	% Abstract
+    \tableofcontents 					            % Inhaltsverzeichnis
+    \clearpage
+\mainmatter 						% die einzelnen Kapitel, bei Bedarf weitere *.tex Dateien erzeugen und hier einbinden
+    \input{Bestandteile/Introduction}
+    \input{Bestandteile/simulatedIlumination}
+    \input{Bestandteile/VisualEffects}
+    \input{Bestandteile/applicationInSeriousGame}
+    \input{Bestandteile/outlook}
+    %\input{./Bestandteile/main}
+% ----------------------------------------------
+    \listoffigures  					 	        % Abbildungsverzeichnis
+    \clearpage
+    %\listoftables						            % Tabellenverzeichnis 
+    \clearpage
+\backmatter 
+
+% Bitte Zitierstil mit Betreuer absprechen! Möglich sind z.B.
+%\bibliographystyle{natdin}
+%\bibliographystyle{abbrvdin}			
+%\bibliographystyle{alphadin}		% Zitierstil des Literaturverzeichnisses
+
+\bibliography{./Literatur/quellen}	% Literatur (BibTex) einbinden 
+\bibliographystyle{ieeetr}
+\input{./Bestandteile/erklaerung} 	% Erklärungen - Unterschreiben nicht vergessen!
+
+\end{document}

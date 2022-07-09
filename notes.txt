@@ -1,0 +1,25 @@
+GDC Talk:
+    - 2 Categories of Games. Play forever and Remember forever
+    - What is Atmosphere
+        - Draw you in the Story an World
+        - Set off the audience imagination
+        - Goal: Immerse someone in the Expireince
+        - Atmosphere helps to sustain immersion
+        - Properties of Atmospheric games
+            - Tonal Cohesion
+            - Internal Consistency
+        - Specific Detail
+        - Its about the big piccture and the smalles details at the same time
+        - "you vs. the environment" 
+        - Atmosphere is about the games identity and its unice feel
+        - He thinks atmosphere consists of 2 components
+            - Theme: Central idea of a work
+            - Tone: Authors attidude towards the theme
+    - why does atmosphere matter?
+        - talking rattatoui
+    - interface design!
+        
+
+
+conclutions: 
+https://www.gamasutra.com/blogs/RonanHouze/20191007/350484/What_is_the_effect_of_the_lighting_design_process_on_game_aesthetics_and_its_influence_on_the_gaming_experience_.php
